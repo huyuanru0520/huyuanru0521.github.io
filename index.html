@@ -260,6 +260,165 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/24/Java-day-01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Huyuanru">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="http://kan.027cgb.com/620408/MRyj1y_132006673014561562.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Huyuanru's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/05/24/Java-day-01/" itemprop="url">Java day 01</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-24T18:36:08+08:00">
+                2019-05-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Java第一天"><a href="#Java第一天" class="headerlink" title="Java第一天"></a>Java第一天</h1><h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><pre><code>字符串常量     “helloworld” “你好世界”
+整数常量          123，345
+小数常量         11.1
+字符常量    &apos;b&apos;， &apos;你&apos;
+布尔常量       true flase 
+ 空常量       null    （空常量不能直接输出）
+</code></pre><p>##几种数据类型及相关信息</p>
+<pre><code>![](Java-day-01/01.png)
+![](Java-day-01/02.png)
+</code></pre><h2 id="字符型"><a href="#字符型" class="headerlink" title="字符型"></a>字符型</h2><pre><code>字符型用“+”转换为int，对照ascii，unicode
+
+String字符串”+“表示连接，任何类型和字符串连接都会变成字符串（感染）
+</code></pre><h2 id="变量的赋值"><a href="#变量的赋值" class="headerlink" title="变量的赋值"></a>变量的赋值</h2><pre><code>定义long类型的数值是，过大的数字会报错，右边的数值以int类型保存。
+如long l=100000000；会报错，使用100000000L替代可以解决。
+</code></pre><h2 id="标识符命名规则及关键字"><a href="#标识符命名规则及关键字" class="headerlink" title="标识符命名规则及关键字"></a>标识符命名规则及关键字</h2><h3 id="标识符规则"><a href="#标识符规则" class="headerlink" title="标识符规则"></a>标识符规则</h3><pre><code>可以数字，字母下划线和$开头。不以数字开头，不能是关键字。 区分大小写。
+
+不能是空格，不包含$以外特殊字符。（字母可以是汉字，日文，或unicode字符集）
+
+![](Java-day-01/03.png)
+</code></pre><h3 id="关键字规则"><a href="#关键字规则" class="headerlink" title="关键字规则"></a>关键字规则</h3><pre><code>都是小写的，一共五十个
+</code></pre><h2 id="自增自减运算符"><a href="#自增自减运算符" class="headerlink" title="自增自减运算符"></a>自增自减运算符</h2><pre><code>使用方式 （与变量使用，常量不可以）
+单独使用： 前++和后++完全一样
+混合使用：  A 前++ 变量立刻+1 并使用结果
+           B 后++ 使用后在加1
+与打印语句混合
+int num2=20；
+System.out.println(++num2)；21，num2=21
+System.out.println(num2++)；21，num2=22
+</code></pre><h2 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h2><pre><code>赋值运算符只有变量可以使用
+
+复合赋值运算符会有一个强制类型转换
+</code></pre><h2 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h2><pre><code>比较运算符的结果是布尔值
+</code></pre><h2 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h2><pre><code>逻辑运算符的短路 
+&amp;&amp;和||
+(false)&amp;&amp;(****)此时短路
+(true)|| (****)此时短路
+短路后表达式不执行。逻辑运算符要两个布尔类型数据。
+</code></pre><h2 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符"></a>三元运算符</h2><pre><code>三元运算符的结果必须被使用
+必须同时保证表达式A和表达式B符合左侧数据类型要
+（在打印三元运算符表达式时，不需要满足第二条。例如 `System.out.println(a&gt;b?a:b);`）
+</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/22/ssh连接github步骤/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -925,7 +1084,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
