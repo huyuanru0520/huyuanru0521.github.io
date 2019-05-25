@@ -16,7 +16,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/05/24/Java-day-01/1.png">
 <meta property="og:image" content="http://yoursite.com/2019/05/24/Java-day-01/2.png">
 <meta property="og:image" content="http://yoursite.com/2019/05/24/Java-day-01/3.png">
-<meta property="og:updated_time" content="2019-05-25T17:25:00.944Z">
+<meta property="og:updated_time" content="2019-05-25T17:27:44.189Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java day 01">
 <meta name="twitter:description" content="Java第一天常量字符串常量     “helloworld” “你好世界” 整数常量          123，345 小数常量         11.1 字符常量        &amp;apos;b&amp;apos;， &amp;apos;你&amp;apos; 布尔常量       true flase   空常量           null    （空常量不能直接输出）">
@@ -194,13 +194,13 @@ String字符串”+“表示连接，任何类型和字符串连接都会变成�
 不能是空格，不包含$以外特殊字符。（字母可以是汉字，日文，或unicode字符集）
 </code></pre><p><img src="/2019/05/24/Java-day-01/3.png" alt></p>
 <h3 id="关键字规则"><a href="#关键字规则" class="headerlink" title="关键字规则"></a>关键字规则</h3><pre><code>都是小写的，一共五十个
-</code></pre><h2 id="自增自减运算符"><a href="#自增自减运算符" class="headerlink" title="自增自减运算符"></a>自增自减运算符</h2><pre><code>    使用方式 （与变量使用，常量不可以）
-    单独使用： 前++和后++完全一样
-    混合使用：  A 前++ 变量立刻+1 并使用结果
-               B 后++ 使用后在加1
-    与打印语句混合
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int num2=20</span><br><span class="line">       System.out.println(++num2)；21，num2=21</span><br><span class="line">       System.out.println(num2++)；21，num2=22</span><br></pre></td></tr></table></figure>
-</code></pre><h2 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h2><pre><code>赋值运算符只有变量可以使用
+</code></pre><h2 id="自增自减运算符"><a href="#自增自减运算符" class="headerlink" title="自增自减运算符"></a>自增自减运算符</h2><pre><code>使用方式 （与变量使用，常量不可以）
+单独使用： 前++和后++完全一样
+混合使用：  A 前++ 变量立刻+1 并使用结果
+           B 后++ 使用后在加1
+与打印语句混合
+</code></pre><figure class="highlight plain"><figcaption><span>num2</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(++num2)；21，num2=21</span><br><span class="line">System.out.println(num2++)；21，num2=22</span><br></pre></td></tr></table></figure>
+<h2 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h2><pre><code>赋值运算符只有变量可以使用
 复合赋值运算符会有一个强制类型转换
 </code></pre><h2 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h2><pre><code>比较运算符的结果是布尔值
 </code></pre><h2 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h2><pre><code>逻辑运算符的短路 
