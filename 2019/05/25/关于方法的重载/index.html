@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Java中关于方法的重载 方法重载在同一个类中出现了多个同名的方法，但秩序形参列表不同就可以自动识别。  由此java中需要三个元素来判断一个方法  1：调用者，方法的所属者。可以是类可以是对象  2：方法名，方法的标识  3：形参列表，系统根据传入的实参来匹配 ps:    返回值用于区分方法是不可行的。在Java中调用方法是可以忽略返回值。此时 ，不同的返回值类型无法用来判断 特殊情况 对于形">
+    <meta name="description" content="Java中关于方法的重载 方法重载在同一个类中出现了多个同名的方法，但只需形参列表不同就可以自动识别。  由此Java中需要三个元素来判断一个方法  1：调用者，方法的所属者。可以是类可以是对象  2：方法名，方法的标识  3：形参列表，系统根据传入的实参来匹配 ps:    返回值用于区分方法是不可行的。在Java中调用方法可以忽略返回值。此时不同的返回值类型无法用来判断 特殊情况 对于形参个数">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于方法的重载">
 <meta property="og:url" content="http://yoursite.com/2019/05/25/关于方法的重载/index.html">
 <meta property="og:site_name" content="Huyuanru&#39;s blog">
-<meta property="og:description" content="Java中关于方法的重载 方法重载在同一个类中出现了多个同名的方法，但秩序形参列表不同就可以自动识别。  由此java中需要三个元素来判断一个方法  1：调用者，方法的所属者。可以是类可以是对象  2：方法名，方法的标识  3：形参列表，系统根据传入的实参来匹配 ps:    返回值用于区分方法是不可行的。在Java中调用方法是可以忽略返回值。此时 ，不同的返回值类型无法用来判断 特殊情况 对于形">
+<meta property="og:description" content="Java中关于方法的重载 方法重载在同一个类中出现了多个同名的方法，但只需形参列表不同就可以自动识别。  由此Java中需要三个元素来判断一个方法  1：调用者，方法的所属者。可以是类可以是对象  2：方法名，方法的标识  3：形参列表，系统根据传入的实参来匹配 ps:    返回值用于区分方法是不可行的。在Java中调用方法可以忽略返回值。此时不同的返回值类型无法用来判断 特殊情况 对于形参个数">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-26T01:23:31.908Z">
+<meta property="og:updated_time" content="2019-05-26T08:39:17.004Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于方法的重载">
-<meta name="twitter:description" content="Java中关于方法的重载 方法重载在同一个类中出现了多个同名的方法，但秩序形参列表不同就可以自动识别。  由此java中需要三个元素来判断一个方法  1：调用者，方法的所属者。可以是类可以是对象  2：方法名，方法的标识  3：形参列表，系统根据传入的实参来匹配 ps:    返回值用于区分方法是不可行的。在Java中调用方法是可以忽略返回值。此时 ，不同的返回值类型无法用来判断 特殊情况 对于形">
+<meta name="twitter:description" content="Java中关于方法的重载 方法重载在同一个类中出现了多个同名的方法，但只需形参列表不同就可以自动识别。  由此Java中需要三个元素来判断一个方法  1：调用者，方法的所属者。可以是类可以是对象  2：方法名，方法的标识  3：形参列表，系统根据传入的实参来匹配 ps:    返回值用于区分方法是不可行的。在Java中调用方法可以忽略返回值。此时不同的返回值类型无法用来判断 特殊情况 对于形参个数">
     
     
         
@@ -175,18 +175,17 @@
 
   <div class="content" itemprop="articleBody">
     <h1 id="Java中关于方法的重载"><a href="#Java中关于方法的重载" class="headerlink" title="Java中关于方法的重载"></a>Java中关于方法的重载</h1><hr>
-<h2 id="方法重载"><a href="#方法重载" class="headerlink" title="方法重载"></a>方法重载</h2><pre><code>在同一个类中出现了多个同名的方法，但秩序形参列表不同就可以自动识别。
+<h2 id="方法重载"><a href="#方法重载" class="headerlink" title="方法重载"></a>方法重载</h2><pre><code>在同一个类中出现了多个同名的方法，但只需形参列表不同就可以自动识别。
 
-由此java中需要三个元素来判断一个方法
+由此Java中需要三个元素来判断一个方法
 
 1：调用者，方法的所属者。可以是类可以是对象
 
 2：方法名，方法的标识
 
 3：形参列表，系统根据传入的实参来匹配
-</code></pre><p>ps:    返回值用于区分方法是不可行的。在Java中调用方法是可以忽略返回值。此时</p>
-<pre><code>，不同的返回值类型无法用来判断
-</code></pre><h2 id="特殊情况-对于形参个数可变的方法"><a href="#特殊情况-对于形参个数可变的方法" class="headerlink" title="特殊情况 对于形参个数可变的方法"></a>特殊情况 对于形参个数可变的方法</h2><p><code>public void cha (String msg)</code>只有一个字符串参数的方法</p>
+</code></pre><p>ps:    返回值用于区分方法是不可行的。在Java中调用方法可以忽略返回值。此时不同的返回值类型无法用来判断</p>
+<h2 id="特殊情况-对于形参个数可变的方法"><a href="#特殊情况-对于形参个数可变的方法" class="headerlink" title="特殊情况 对于形参个数可变的方法"></a>特殊情况 对于形参个数可变的方法</h2><p><code>public void cha (String msg)</code>只有一个字符串参数的方法</p>
 <p><code>public void cha (String... books)</code>形参个数可变的方法</p>
 <pre><code>想要调用形参个数可变的方法时，不能通过一个字符串来调用，
 
