@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Java 面向对象—-关于对象 对象的产生和使用 创建对象： Student stu = new Student(); 此处的stu即为对象。未被static修饰的方法或变量只能通过对象来调用，而static修饰的既可以被对象调用，也可 以被类调用。 当调用的方法有形参是，必须为形参赋值。类和对象，类是一般的抽像的，而对象是具体的。使用类创建对象，可 以重复的使用一般的特征。 使用new来创建对象">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java 面向对象----关于对象">
+<meta property="og:url" content="http://yoursite.com/2019/05/30/Java-面向对象-关于对象/index.html">
+<meta property="og:site_name" content="Huyuanru&#39;s blog">
+<meta property="og:description" content="Java 面向对象—-关于对象 对象的产生和使用 创建对象： Student stu = new Student(); 此处的stu即为对象。未被static修饰的方法或变量只能通过对象来调用，而static修饰的既可以被对象调用，也可 以被类调用。 当调用的方法有形参是，必须为形参赋值。类和对象，类是一般的抽像的，而对象是具体的。使用类创建对象，可 以重复的使用一般的特征。 使用new来创建对象">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-29T16:39:28.747Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java 面向对象----关于对象">
+<meta name="twitter:description" content="Java 面向对象—-关于对象 对象的产生和使用 创建对象： Student stu = new Student(); 此处的stu即为对象。未被static修饰的方法或变量只能通过对象来调用，而static修饰的既可以被对象调用，也可 以被类调用。 当调用的方法有形参是，必须为形参赋值。类和对象，类是一般的抽像的，而对象是具体的。使用类创建对象，可 以重复的使用一般的特征。 使用new来创建对象">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Java 面向对象----关于对象</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="banner">
+<div id="blogtitel" class="blogtitel">Huyuanru&#39;s blog</div>
+<ul id="wrapper" class="wrapper">
+  <div class="sun">
+    <div class="star"></div>
+  </div>
+  <div class="mercury">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="venus">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="earth">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="mars">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="jupiter">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+</ul>
+</div>
+
+    <div class="background">
+      
+        <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="https://huyuanru0520.github.io">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/huyuanru0520">Projects</a></li>
+         
+          <li><a href="/guestbook">guestbook</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2019/05/30/Java面向对象-方法详解-md/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$("#i-prev").toggle();" onmouseout="$("#i-prev").toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2019/05/30/Java面向对象-类的构成及定义/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$("#i-next").toggle();" onmouseout="$("#i-next").toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$("#i-top").toggle();" onmouseout="$("#i-top").toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$("#i-share").toggle();" onmouseout="$("#i-share").toggle();" onclick="$("#share").toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/05/30/Java-面向对象-关于对象/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2019/05/30/Java-面向对象-关于对象/&text=Java 面向对象----关于对象"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2019/05/30/Java-面向对象-关于对象/&title=Java 面向对象----关于对象"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2019/05/30/Java-面向对象-关于对象/&is_video=false&description=Java 面向对象----关于对象"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Java 面向对象----关于对象&body=Check out this article: http://yoursite.com/2019/05/30/Java-面向对象-关于对象/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2019/05/30/Java-面向对象-关于对象/&title=Java 面向对象----关于对象"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/05/30/Java-面向对象-关于对象/&title=Java 面向对象----关于对象"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/05/30/Java-面向对象-关于对象/&title=Java 面向对象----关于对象"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/05/30/Java-面向对象-关于对象/&title=Java 面向对象----关于对象"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/05/30/Java-面向对象-关于对象/&name=Java 面向对象----关于对象&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      
+    </div>
+  </span>
+</div>
+
+      
+      <div class="content index width mx-auto px2 my4">
+          
+          <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Java 面向对象----关于对象
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Huyuanru's blog</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2019-05-29T16:38:06.000Z" itemprop="datePublished">2019-05-30</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Java/">Java</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>Java 面向对象—-关于对象</p>
+<p>对象的产生和使用</p>
+<p>创建对象：</p>
+<p>Student stu = new Student();</p>
+<p>此处的stu即为对象。未被static修饰的方法或变量只能通过对象来调用，而static修饰的既可以被对象调用，也可</p>
+<p>以被类调用。</p>
+<p>当调用的方法有形参是，必须为形参赋值。类和对象，类是一般的抽像的，而对象是具体的。使用类创建对象，可</p>
+<p>以重复的使用一般的特征。</p>
+<p>使用new来创建对象，所需的内存都是在堆内存中。而左边的变量是一个引用型变量，其在栈内存中指向堆内存中</p>
+<p>的对象。Student stu1 = stu；即引用型引用了一个引用型，他们都指向了同一个堆内存地址。而一个对象一旦没</p>
+<p>有一个变量指向它，Java就会以垃圾处理回收内存。那么把一个引用变量的值赋为null，就会让这个对象变成垃</p>
+<p>圾。</p>
+<p>关于this关键字：this总是指向调用该方法的对象。</p>
+<p>两种不同的引用情形：</p>
+<p>构造方法中正在创建的对象</p>
+<p>在方法中引用调用该方法的对象</p>
+<pre><code>public class Dog{
+  public void Jump（）{
+    System.out.println(&quot;执行jump方法&quot;);
+  }
+  public void Run(){
+    this.Jump();//用this，当new一个对象时，this将会指向调用Run方法的对象
+    System.out.println(&quot;正在执行Run方法&quot;);
+  }
+}
+</code></pre><p>ps： Java允许对象的一个成员调用另一个成员，因此上面方法前的this也可以省略</p>
+<p>static 修饰的方法，可以被类或实例引用，一旦用this关键字，这个关键字可能无法指向合适的对象。所</p>
+<p>以static 修饰的对象不能用this引用，</p>
+<p>没有static修饰的方法只能由实例引用，一旦出现在static修饰的方法中，而static修饰的方法可以由</p>
+<p>类调用，这样没有static修饰的普通方法就可能由类来调用，此时与第一句矛盾。所以static修饰的方法</p>
+<p>不能调用普通方法.即构成了一句======“静态成员不能直接访问非静态成员”</p>
+<p>static修饰的成员属于类本身，完全不属于该类的实例。static修饰的成员就不应该由对象来调用，应该用类来调</p>
+<p>用。</p>
+<p>在静态方法中调用另一个普通方法需要创建一个对象。一般情况，普通方法访问其他方法成员变量时无需使用</p>
+<p>this，但如果方法中的局部变量和成员变量重名，方法中又需要访问这个成员变量就必须使用this。</p>
+<p>构造器中的this指向正在初始化的对像。而构造器中访问其他成员变量和方法时可以省略this关键字。但当构造发</p>
+<p>方法中的变量和成员变量相同时，就可能需要this。</p>
+<p>将this作为返回值，可以连续调用相同的方法，返回了一个对象，对象可以调用方法，当调用的方法还是该方法时就可以再返回一个对象。可以一直下去</p>
+
+  </div>
+</article>
+
+
+
+      </div>
+      
+       <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="https://huyuanru0520.github.io">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/huyuanru0520">Projects</a></li>
+         
+          <li><a href="/guestbook">guestbook</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/05/30/Java-面向对象-关于对象/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2019/05/30/Java-面向对象-关于对象/&text=Java 面向对象----关于对象"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2019/05/30/Java-面向对象-关于对象/&title=Java 面向对象----关于对象"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2019/05/30/Java-面向对象-关于对象/&is_video=false&description=Java 面向对象----关于对象"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Java 面向对象----关于对象&body=Check out this article: http://yoursite.com/2019/05/30/Java-面向对象-关于对象/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2019/05/30/Java-面向对象-关于对象/&title=Java 面向对象----关于对象"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/05/30/Java-面向对象-关于对象/&title=Java 面向对象----关于对象"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/05/30/Java-面向对象-关于对象/&title=Java 面向对象----关于对象"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/05/30/Java-面向对象-关于对象/&title=Java 面向对象----关于对象"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/05/30/Java-面向对象-关于对象/&name=Java 面向对象----关于对象&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$("#toc-footer").toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$("#share-footer").toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$("#nav-footer").toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+      
+      <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 Huyuanru
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="https://huyuanru0520.github.io">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/huyuanru0520">Projects</a></li>
+         
+          <li><a href="/guestbook">guestbook</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+      <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+<!-- Disqus Comments -->
+
+
+    </div>
+</body>
+</html>
