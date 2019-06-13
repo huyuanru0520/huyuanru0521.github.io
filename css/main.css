@@ -1807,7 +1807,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #a66f7a;
+  background: #a39875;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2647,15 +2647,15 @@ embed {
   display: inline-block;
 }
 body {
-  background: url("http://kan.027cgb.com/620408/taylor_swift_in_pink_dress-wallpaper-1920x1080.jpg");
+  background: url("http://kan.027cgb.com/620408/wallhaven-462935.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
 }
 .main-inner {
-  background: #eae1e3;
-  opacity: 0.6;
+  background: #fff;
+  opacity: 0.9;
 }
 .header-inner {
   opacity: 0.8;
