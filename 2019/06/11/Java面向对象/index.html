@@ -101,7 +101,7 @@
 <meta property="og:site_name" content="Huyuanru&#39;s blog">
 <meta property="og:description" content="Java面向对象Java面向对象—-类的构成及定义类和对象1.定义类 123456789修饰符 class 类名 &amp;#123;有参/无参构造方法成员变量方法&amp;#125;  修饰符：public，private，abstract 类名：有意义的首字母大写的单词连缀 ps：成员之间可以相互调用，但static修饰的成员不能访问没有static修饰的成员. 定义构造方法： 12345修饰符 类名(形参列">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-12T01:49:26.637Z">
+<meta property="og:updated_time" content="2019-06-13T03:10:56.621Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java面向对象">
 <meta name="twitter:description" content="Java面向对象Java面向对象—-类的构成及定义类和对象1.定义类 123456789修饰符 class 类名 &amp;#123;有参/无参构造方法成员变量方法&amp;#125;  修饰符：public，private，abstract 类名：有意义的首字母大写的单词连缀 ps：成员之间可以相互调用，但static修饰的成员不能访问没有static修饰的成员. 定义构造方法： 12345修饰符 类名(形参列">
@@ -337,6 +337,8 @@
 <p>ps：成员之间可以相互调用，但static修饰的成员不能访问没有static修饰的成员.</p>
 <p>定义构造方法：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">修饰符 类名(形参列表/可以无参)&#123;</span><br><span class="line"></span><br><span class="line">​	<span class="comment">//空或者多条执行语句</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
 
 <p>ps：用来创建对象，系统默认给出了方法，但一旦自己写出了构造方法，系统将不再提供.</p>
 <p>​    对于构造器的返回值类型，其隐式返回了当前类的对象，而不能用void。</p>
@@ -602,9 +604,9 @@
 <p>final修饰的实例变量有三个位置赋值，但如果想要获得宏变量的效果，就必须在定义时的位置给他赋值。</p>
 <p>final修饰的方法：如果不希望子类修改父类的方法，可以使用final修饰。</p>
 <p>final类：这个类是一个最终类，不能被继承。</p>
-<h2 id="Java面向对象—-抽象类"><a href="#Java面向对象—-抽象类" class="headerlink" title="Java面向对象—-抽象类"></a>Java面向对象—-抽象类</h2><p>在父类中的一个方法，对于子类要调用这个方法，但是又需要对这个方法进行重写，此时在父类中先定义一个方法</p>
-<p>名但没有方法体的方法，让子类自行去实现这个方法，这就是抽象类。出现的原因：当子类需要调用父类的方法，</p>
-<p>但通过父类重载来给出一个是让父类的代码过于庞大，一个是无法准确判断子类需要的方法。</p>
+<h2 id="Java面向对象—-抽象类"><a href="#Java面向对象—-抽象类" class="headerlink" title="Java面向对象—-抽象类"></a>Java面向对象—-抽象类</h2><p>在父类中的一个方法，对于子类要调用这个方法，但是又需要对这个方法进行重写，此时在父类中先定义一个方法名但没有方</p>
+<p>法体的方法，让子类自行去实现这个方法，这就是抽象类。出现的原因：当子类需要调用父类的方法，但通过父类重载来给出</p>
+<p>一个是让父类的代码过于庞大，一个是无法准确判断子类需要的方法。</p>
 <p><strong>抽象类无法new，必须abstract，其构造器不是用来创建对象，主要用来被子类调用。含抽象方</strong></p>
 <p><strong>法的类只能被定义为抽象类</strong></p>
 <h2 id="Java面向对象—-接口"><a href="#Java面向对象—-接口" class="headerlink" title="Java面向对象—-接口"></a>Java面向对象—-接口</h2><h3 id="接口的定义及作用"><a href="#接口的定义及作用" class="headerlink" title="接口的定义及作用"></a>接口的定义及作用</h3><p>作用：<br>     定义变量<br>     调用其他接口中的定义的常量<br>     被其他类实现<br>定义：</p>
