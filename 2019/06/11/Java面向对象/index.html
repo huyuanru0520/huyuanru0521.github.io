@@ -381,35 +381,27 @@
       
         <h1 id="Java面向对象"><a href="#Java面向对象" class="headerlink" title="Java面向对象"></a>Java面向对象</h1><h2 id="Java面向对象—-类的构成及定义"><a href="#Java面向对象—-类的构成及定义" class="headerlink" title="Java面向对象—-类的构成及定义"></a>Java面向对象—-类的构成及定义</h2><h3 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a>类和对象</h3><p>1.定义类</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">修饰符 <span class="class"><span class="keyword">class</span> 类名 </span>&#123;</span><br><span class="line"></span><br><span class="line">有参/无参构造方法</span><br><span class="line"></span><br><span class="line">成员变量</span><br><span class="line"></span><br><span class="line">方法</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <a id="more"></a>
-
-
-
 <p>修饰符：public，private，abstract</p>
 <p>类名：有意义的首字母大写的单词连缀</p>
 <p>ps：成员之间可以相互调用，但static修饰的成员不能访问没有static修饰的成员.</p>
 <p>定义构造方法：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">修饰符 类名(形参列表/可以无参)&#123;</span><br><span class="line"></span><br><span class="line">​	<span class="comment">//空或者多条执行语句</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>ps：用来创建对象，系统默认给出了方法，但一旦自己写出了构造方法，系统将不再提供.</p>
 <p>​    对于构造器的返回值类型，其隐式返回了当前类的对象，而不能用void。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">Student</span> <span class="params">(<span class="keyword">int</span> age,<span class="keyword">int</span> hight)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">​		<span class="keyword">this</span>.age = age;</span><br><span class="line">				<span class="comment">/*此处的this是指向new出的对象的。而将形参的a的值给对象所拥有对应的属性值。所谓对象就是由类定义的一种引用数据类型*/</span></span><br><span class="line"></span><br><span class="line">​		<span class="keyword">this</span>.hight = hight;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Student in = <span class="keyword">new</span> Student(<span class="number">2</span>,<span class="number">3</span>);<span class="comment">//此处使用有参构造方法new一个对象</span></span><br></pre></td></tr></table></figure>
-
 <p>定义成员变量：</p>
 <p>修饰符 类型 变量名 初始值。</p>
 <p>修饰符： public，protected，private，static，final，public，protected，private不</p>
 <p>能同时使用，但可与后二者组合</p>
 <p>定义方法：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">修饰符  返回值类型 方法名  (形参) &#123;</span><br><span class="line"></span><br><span class="line">​	<span class="comment">//方法体；</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>修饰符： public，protected，private，static，final，abstract。final和abstract也</p>
 <p>不能同时出现 。</p>
 <p>形参列表：多组参数间“,”隔开。形参类型和形参名之间以空格隔开。</p>
 <p>ps： static 修饰的变量和方法：一旦被static修饰，该方法或变量就是属于类，可用类名</p>
 <p>调用。没有static修饰的只能通过对象调用。对象中改变了该变量，该变量的值会随之改变。</p>
 <h2 id="Java面向对象—-成员和局部变量"><a href="#Java面向对象—-成员和局部变量" class="headerlink" title="Java面向对象—-成员和局部变量"></a>Java面向对象—-成员和局部变量</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">					   /==实例变量</span><br><span class="line"></span><br><span class="line">​			   /==成员变量 |</span><br><span class="line"></span><br><span class="line">​			|		   \==类变量（以<span class="keyword">static</span>修饰）</span><br><span class="line"></span><br><span class="line">变量分为==	        |</span><br><span class="line"></span><br><span class="line">​			|			/    ==形参</span><br><span class="line"></span><br><span class="line">​			|		      |</span><br><span class="line"></span><br><span class="line">​			   \==局部变量        |        ==方法局部变量</span><br><span class="line"></span><br><span class="line">​					      |</span><br><span class="line"></span><br><span class="line">​					  	\   ==代码块局部变量</span><br></pre></td></tr></table></figure>
-
 <p>类变量与类共存亡，实例变量与实例共存亡。</p>
 <p>调用有三种：</p>
 <p>1 类.类变量</p>
@@ -494,7 +486,6 @@
 <p>1：构造方法中<strong>正在创建</strong>的对象</p>
 <p>2：在方法中引用调用该方法的对象</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class Dog&#123;</span><br><span class="line">  public void Jump（）&#123;</span><br><span class="line">    System.out.println(&quot;执行jump方法&quot;);</span><br><span class="line">  &#125;</span><br><span class="line">  public void Run()&#123;</span><br><span class="line">    this.Jump();//用this，当new一个对象时，this将会指向调用Run方法的对象</span><br><span class="line">    System.out.println(&quot;正在执行Run方法&quot;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>Java允许对象的一个成员调用另一个成员，因此上面方法前的this也可以省略static 修饰</p>
 <p>的方法，可以被类或实例引用，一旦用this关键字，这个关键字可能无法指向合适的对象。</p>
 <p>所以static修饰的成员不能用this引用，没有static修饰的方法只能由实例用，一旦出现在</p>
@@ -546,14 +537,12 @@
 <p>访问，因此构造器中只能用this关键字来访问，这就是this指向问题的解释。</p>
 <h2 id="Java面向对象—-类的继承"><a href="#Java面向对象—-类的继承" class="headerlink" title="Java面向对象—-类的继承"></a>Java面向对象—-类的继承</h2><h3 id="继承的特点"><a href="#继承的特点" class="headerlink" title="继承的特点"></a>继承的特点</h3><p>继承的代码</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">修饰符 class SubClass extends SuperClass</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">	//类定义部分</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>子类不能继承父类的构造器，但子类可以调用父类的构造方法。</p>
 <p>每个类都最多只有一个直接父类</p>
 <p>java.lang.Object类是所有类的父类</p>
 <h3 id="重写父类的方法"><a href="#重写父类的方法" class="headerlink" title="重写父类的方法"></a>重写父类的方法</h3><p>多数情况，子类都是为了继承父类的变量或方法，但有些子类需要对方法做出一定修改。比</p>
 <p>如鸵鸟继承了鸟这个类，但它没有飞的这个方法，需要做出一定修改。代码如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public class Bird&#123;</span><br><span class="line">  public void fly&#123;</span><br><span class="line">    System.out.println(&quot;i can fly&quot;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Ostrich extends Bird&#123;</span><br><span class="line">  public void fly &#123;</span><br><span class="line">    System.out.println(&quot;i can run&quot;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>这就是方法的重写，也是方法覆盖。</p>
 <p><strong>方法覆盖的原则</strong> ——————两同两小一大</p>
 <p>两同:方法名相同，形参列表相同</p>
@@ -587,7 +576,6 @@
 <p>   调用另一个构造器，而执行本类中另一个构造器时，也会调用父类的构造器。</p>
 <p>3: 子类没有this和super 会在执行子类构造器之前隐式调用父类<strong>无参</strong>构造器。</p>
 <h3 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(待转换类型)待转换对象</span><br></pre></td></tr></table></figure>
-
 <p>将一种类型的对象强制转换为另一种类型对象，是为了解决当出现多态的情况时，对象在编</p>
 <p>译阶段也可以本应只能在运行阶使用的方法。</p>
 <p>而将子类的对象付给父类的引用变量时，就会产生<strong>向上转型</strong>但将父类对象赋给子类时就</p>
@@ -618,16 +606,13 @@
 <p>这样使得代码冗余，但利用多态让子类对象在执行时使用的是子类方法，编译的是父类类型，</p>
 <p>将其传入方法的形参，以多态的形式减少了代码的重复。具体如下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Animal</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String cprolor ;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Animal</span><span class="params">(String color,<span class="keyword">int</span> age)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.color = color;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AnimalOperate</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Ao</span><span class="params">(Cat c)</span></span>&#123;</span><br><span class="line">        c.eat();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Cat</span> <span class="keyword">extends</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">        sout(<span class="string">"cat likes fish"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> class <span class="title">Test</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Cat c = <span class="keyword">new</span> Cat();</span><br><span class="line">        Animaloperate ao = <span class="keyword">new</span> Animaloperate;</span><br><span class="line">        ao.Ao(c);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//可以看出当猫的对象被用来当参数传入Ao方法中时，就需要在Ao类中写一个猫的方法，如</span></span><br><span class="line"></span><br><span class="line">果有个狗类就需要写狗，但是利用多态Animal c = <span class="keyword">new</span> Cat();</span><br><span class="line"></span><br><span class="line">把方法改为</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Ao</span> <span class="params">(Animal c )</span></span>&#123;</span><br><span class="line">    c.eat();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*在编译时使用的是Animal类，可以作为传入参数。但当其执行的时候就会使用cat</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">类的方法，这样利用了多态和方法的重写。提高代码的复用*/</span></span><br></pre></td></tr></table></figure>
-
 <h3 id="多态的弊端"><a href="#多态的弊端" class="headerlink" title="多态的弊端"></a>多态的弊端</h3><p>不能使用子类特有的功能。</p>
 <p>此时就要使用向下转型。或者强制类型转换和—“instanceof”</p>
 <p>向下转型就是将父类的引用型变量强转为子类并赋给一个子类的引用型变量：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Animal a = <span class="keyword">new</span> Cat();</span><br><span class="line"></span><br><span class="line">Cat c = (Cat)a;</span><br></pre></td></tr></table></figure>
-
 <p>此时的c既可以调用子类的方法，也可以调用父类的方法。</p>
 <h3 id="初始化块"><a href="#初始化块" class="headerlink" title="初始化块"></a>初始化块</h3><p>初始化块时Java类的构成的第四个成员。（包括成员变量，方法，构造器）</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">初始化块的格式：</span><br><span class="line"></span><br><span class="line">修饰符 &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>初始化块的修饰符只能是static，static修饰的是静态初始化块。初始化块不能用类，对象</p>
 <p>来调用，不接受任何参数的传入，只能由系统在执行构造器之前执行。static修饰的初始化</p>
 <p>块成为类初始化块。类初始化块是对类进行初始化，通常用于对类成员变量执行初始化处理。</p>
@@ -685,7 +670,6 @@
 <h2 id="Java面向对象—-接口"><a href="#Java面向对象—-接口" class="headerlink" title="Java面向对象—-接口"></a>Java面向对象—-接口</h2><h3 id="接口的定义及作用"><a href="#接口的定义及作用" class="headerlink" title="接口的定义及作用"></a>接口的定义及作用</h3><p>作用：<br>     定义变量<br>     调用其他接口中的定义的常量<br>     被其他类实现<br>定义：</p>
 <p>使用interface关键字具体格式如下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;修饰符&#125; <span class="class"><span class="keyword">interface</span> 接口名 <span class="keyword">extends</span> 父接口1，父接口2...</span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">        常量：</span><br><span class="line">        变量：成员变量只能是静态的</span><br><span class="line">        方法：默认方法。实例方法，类方法，私有方法</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p><strong>接口的变量常量与修饰符</strong></p>
 <p>静态常量：系统会自动为其加上static和final修饰符。接口中定义成员变量时，总会用</p>
 <p>publicstatic final修饰符，由于没有构造器和初始化块因此只能在定义时为其指定初始值</p>
@@ -703,12 +687,10 @@
 <p>分开在extends后实现使用impements关键字。</p>
 <p>类实现接口格式：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[修饰符] <span class="class"><span class="keyword">class</span> 类名 <span class="keyword">extends</span> 父类 <span class="keyword">implements</span> 接口1，接口2...</span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">        类体；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>一个类implements的接口中必须完全诗实现接口定义的全部抽象方法。否则，该类将保留从</p>
 <p>父接口那里及继承到的抽象方法该类也必须定义为抽像类。</p>
 <h2 id="Java面向对象—-内部类"><a href="#Java面向对象—-内部类" class="headerlink" title="Java面向对象—-内部类"></a>Java面向对象—-内部类</h2><h3 id="定义与作用"><a href="#定义与作用" class="headerlink" title="定义与作用"></a>定义与作用</h3><p>格式：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">修饰符 <span class="class"><span class="keyword">class</span> 类名 ()</span>&#123;<span class="comment">//内部类的修饰符：由于内部类是一种类成员，所以修饰符会更多。</span></span><br><span class="line">    类成员</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>在类的内部定义一个类，这个类离开了外部类就没有意义，这个类就是内部类。</p>
 <p>遵守以下原则：</p>
 <p>1：提供更好的封装，同包内不允许其他类访问。</p>
@@ -756,7 +738,6 @@
 <p>第二不能定义构造器，因为它没有类名，但可以使用初始化块来初始化一些成员。</p>
 <p>匿名内部类不需要class关键字，具体格式：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> 实现接口（）| 父类构造器（实参列表）&#123;</span><br><span class="line"></span><br><span class="line">​		<span class="comment">//匿名内部类的类体部分。</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>由上可知匿名内部类必须实现一个接口或继承一个父类并且完全实现接口或父类中的抽象方</p>
 <p>法。匿名内部类是一次性的不能重复使用的，因此可以使用一个其继承的父类的子类对象或</p>
 <p>者实现的接口的子类的引用型变量来接受这个对象。</p>

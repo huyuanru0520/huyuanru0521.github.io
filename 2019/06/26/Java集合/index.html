@@ -386,34 +386,26 @@
 <p>Collection分为Set，Quene，List。</p>
 <p>其中Set是无序的，不能保存相同的元素，所以只能通过元素本身进访问。List是有序的，</p>
 <p>它通过索引来查找具体的位置。 Quene是一个队列。</p>
-<p>Map集合，它保存的元素是由key和value组成的，可以通过key值来查找具体的元素位置。</p>
-<a id="more"></a>
-
-
+<p>Map集合，它保存的元素是由key和value组成的，可以通过key值来查找具体的元素位置。<br><a id="more"></a></p>
 <h3 id="Collection集合"><a href="#Collection集合" class="headerlink" title="Collection集合"></a>Collection集合</h3><p>Colletion和Iterator接口</p>
 <p>Collection是集合的一个根接口，所以它的方法会被子类继承。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">add</span><span class="params">(Object o)</span>：向集合添加一个元素</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">addAll</span><span class="params">(Collection c)</span>：向集合中加入另一个集合</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">clear</span><span class="params">()</span>：清除集合里所有的元素</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">contains</span><span class="params">(Object o)</span>：返回集合是否包含指定的元素</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">containsAll</span><span class="params">(Collection c)</span>：返回集合是否包含集合c所有的元素</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">isEmpaty</span><span class="params">()</span>：返回集合是否为空，长度为0是<span class="keyword">true</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">Iterator <span class="title">iterator</span><span class="params">()</span>：返回一个Iterator对象，用于遍历集合</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">remove</span><span class="params">(Object o)</span>：删除集合指定的元素，当元素o由多个时，删除第一个</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">removeAll</span><span class="params">(Collection c)</span>：从集合中删除集合c包含的所有元素，如删除大于0个以上元素就返回<span class="keyword">true</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">retainAll</span><span class="params">(Collection c)</span>：集合中删除c中不包含的元素，只要改变了这个集合就返回<span class="keyword">true</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">size</span><span class="params">()</span>：返回集合里元素个数</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">Object[] <span class="title">toArray</span><span class="params">()</span> ：把集合转换成一个数组，所有集合元素变成数组元素。</span></span><br></pre></td></tr></table></figure>
-
 <p>由于Collection所有的实现类中重写了toString方法，所以可以直接使用sout全部输出集合元素。</p>
 <p><em>Lambda表达式遍历集合：</em></p>
 <p>Iterable接口中新增了一个forEach的默认方法，而这个方法所需的参数类型是一个函数式</p>
 <p>接口，此时就可以使用Lambda表达式进行遍历。</p>
 <p>Iterator接口与Collection和Map不一样，它是用来遍历迭代。接口中定义了四个方法：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">hasNext</span><span class="params">()</span>: 被迭代的集合元素还没有被遍历完就返回<span class="keyword">true</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">Object <span class="title">next</span><span class="params">()</span>: 返回集合里的下一个元素</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">remove</span><span class="params">()</span>: 删除集合里上一次next返回的元素</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">forEachRemaing</span><span class="params">(Consumer action)</span>:该方法可以使用Lambda表达式遍历集合元素</span></span><br></pre></td></tr></table></figure>
-
 <p><strong>注意Iterator对象必须要有与之关联的Collection对象。</strong></p>
 <p>使用Iterator迭代来遍历集合：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Iterator i = collection.iterator();<span class="comment">//利用多态，集合继承的iterator方法获得一个迭代器的对象</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span>(i.hasNext())&#123;<span class="comment">//没有被遍历完就就一直循环</span></span><br><span class="line">    String coll = (String)i.next();<span class="comment">//next()返回的是Object类，所以需要强转（向下转型）</span></span><br><span class="line">    sout(coll);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*注意：在循环内对coll进行修改是不会影响集合元素的值，迭代只是把值传递进来。</span></span><br><span class="line"><span class="comment">	   使用iterator遍历时不能对集合进行修改，否则会引起报错。如果需要对集合进行改动则只能通过remove操作。</span></span><br></pre></td></tr></table></figure>
-
 <p>使用lambda表达式迭代：</p>
 <p>由于forEachRemaining（Consumer action）中的Consumer同样是一个函数式接口，所以可</p>
 <p>以通过Lambda表达式进行遍历。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Iterator i = collection.iterator();<span class="comment">//获取迭代器对象</span></span><br><span class="line"></span><br><span class="line">i.forEachRemaining(obj -&gt; System.out.println(<span class="string">"迭代集合元素"</span>+obj));<span class="comment">//Lambda表达式</span></span><br></pre></td></tr></table></figure>
-
 <p>使用foreach进行遍历：</p>
 <p>这是一个增强型的for循环</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (元素类型 变量名:集合名)&#123;</span><br><span class="line">    sout(变量名)；</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//迭代过程集合不能被改变</span></span><br></pre></td></tr></table></figure>
-
 <h3 id="Set集合"><a href="#Set集合" class="headerlink" title="Set集合"></a>Set集合</h3><p>继承了Collection，与collection不同的是，set集合用add加入同样的元素时，返回值</p>
 <p>时false。且新元素不会被加入。</p>
 <p>HashSet类是Set集合的一个实现类特点如下：</p>
@@ -444,40 +436,40 @@
 <table>
 <thead>
 <tr>
-<th align="center">实例变量类型</th>
+<th style="text-align:center">实例变量类型</th>
 <th>计算方式</th>
 <th>实例变量类型</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">boolean</td>
+<tbody>
+<tr>
+<td style="text-align:center">boolean</td>
 <td>hashCode=(f?0:1)</td>
 <td>float</td>
 </tr>
 <tr>
-<td align="center">整数类型（byte，short，char，int）</td>
+<td style="text-align:center">整数类型（byte，short，char，int）</td>
 <td>hashCode=(int)f;</td>
 <td>double</td>
 </tr>
 <tr>
-<td align="center"></td>
+<td style="text-align:center"></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td align="center">long</td>
+<td style="text-align:center">long</td>
 <td>hashCode=(int)(f^(f&gt;&gt;&gt;32));</td>
 <td>引用类型</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <h3 id="LinkedHashSet类"><a href="#LinkedHashSet类" class="headerlink" title="LinkedHashSet类"></a>LinkedHashSet类</h3><p>是hashSet的子类，同时使用链表维护元素的次序。在遍历时会以添加是的顺序访问。底层是</p>
 <p>由一个链表组成。特点具有查询慢，增删改块。但即便它是有序的，但它不能元素重复。</p>
 <h3 id="TreeSet类"><a href="#TreeSet类" class="headerlink" title="TreeSet类"></a>TreeSet类</h3><p>TreeSet是SortedSet的实现类，可以让元素保持排序状态</p>
 <p><strong>TreeSet的额外方法</strong>：</p>
 <p>Comparator comparator(): 如果使用了定制排序，方法返回定制排序使用的comparator；如</p>
-<p>果使用了自然排序，就返回null。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. Object first():返回集合中的第一个元素Object last():返回集合的最后一个元素</span><br><span class="line">2. Object lower(Object e): 返回集合中位于指定元素之前的元素，该指定元素不一定是 集合中元素</span><br><span class="line">3. Object higher(Object e):返回集合中位于指定元素之后的元素</span><br><span class="line">4. SortedSet subSet(Object fromElemnt, Object toELement):返回此Set的子集合，范围从from到to,包含from但不包含to。</span><br><span class="line">5. SortedSet headSet(Object toElement):返回Set的子集，包含所有小于toElement的元素组成。</span><br><span class="line">6. SortedSet tailSet(Object fromElement):返回大于等于fromELement的元素。</span><br></pre></td></tr></table></figure>
-
+<p>果使用了自然排序，就返回null。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. Object first():返回集合中的第一个元素Object last():返回集合的最后一个元素</span><br><span class="line">2. Object lower(Object e): 返回集合中位于指定元素之前的元素，该指定元素不一定是 集合中元素</span><br><span class="line">3. Object higher(Object e):返回集合中位于指定元素之后的元素</span><br><span class="line">4. SortedSet subSet(Object fromElemnt, Object toELement):返回此Set的子集合，范围从from到to,包含from但不包含to。</span><br><span class="line">5. SortedSet headSet(Object toElement):返回Set的子集，包含所有小于toElement的元素组成。</span><br><span class="line">6. SortedSet tailSet(Object fromElement):返回大于等于fromELement的元素。</span><br></pre></td></tr></table></figure></p>
 <p>TreeSet的顺序是按元素大小排序，不是元素的插入排序</p>
 <p><strong>自然排序</strong></p>
 <p>自然排序就是调用compareTo(Object o)方法比较两个元素的大小。然后将集合按升序列。</p>
@@ -505,7 +497,6 @@
 <p>象来决定排序，由于comparator是一个函数式接口，因此可以使用Lambda表达式。</p>
 <p>当然使用Comparator比较两个时，依然不能向集合中添加对象。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> <span class="title">implememts</span> <span class="title">Comparator</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//Student类特有属性及方法</span></span><br><span class="line"></span><br><span class="line">    Override</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Student s,Student s1)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> ...;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <h2 id="List集合"><a href="#List集合" class="headerlink" title="List集合"></a>List集合</h2><p>有序，可重复的集合</p>
 <p>可以通过索引确定元素的位置，元素按照添加时的顺序存放。作为collection的子接口，可</p>
 <p>以使用collection的所有方法，并且有自己特有的方法，因为它有索引。</p>
@@ -523,7 +514,6 @@
 <p>使用listIterator()方法，该方法返回一个ListIterator的对象。但相比于iterator添加了</p>
 <p>几个方法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. boolean hasPrevious（）：返回该迭代器关联的集合是否还有上一个元素。</span><br><span class="line">2. Object previous （）：返回该迭代器的上一个元素。</span><br><span class="line">3. add（Object o）： 向指定位置加一个元素。</span><br></pre></td></tr></table></figure>
-
 <p>对比iterator的remove，它可以添加一个元素。而且它还可以向前遍历。</p>
 <p>固定长度的list：</p>
 <p>在工具类中提供了一个方法 asList（Object … a）。该方法可以将一个已知数组转化成</p>
@@ -569,7 +559,8 @@
 <th>清空集合中所有的元素</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>boolean containsKey(Object key)</td>
 <td>查看集合是否包含指定的key</td>
 </tr>
@@ -589,7 +580,8 @@
 <td>Collection values()</td>
 <td>返回所有的value组成的Collection</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p>内部类Entry及所含方法</p>
 <ol>
 <li>Object getKey():返回Entry里包含的key</li>
@@ -599,7 +591,6 @@
 <h2 id="集合的的工具类"><a href="#集合的的工具类" class="headerlink" title="集合的的工具类"></a>集合的的工具类</h2><p>Collections针对集合操作的工具类，无法直接创建对象，使用类名调用静态方法。</p>
 <p>具有以下三个常用的方法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Collections.sort((必须使用List及其子类)集合名):将集合按升序排列</span><br><span class="line"></span><br><span class="line">Collections.reverse((必须使用List及其子类)):将集合反转返回</span><br><span class="line"></span><br><span class="line">Collections.shuffle((必须使用List及其子类)):将集合随机置换，直接影响集合，返回为void型。</span><br><span class="line"></span><br><span class="line">Collections方法toString</span><br></pre></td></tr></table></figure>
-
 
       
     </div>
